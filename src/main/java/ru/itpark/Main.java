@@ -72,6 +72,10 @@ public class Main {
         housesBase.addHouse(apartment1);
         housesBase.addHouse(apartment2);
         housesBase.addHouse(house2);
-        housesBase.printSortingHouse();
+        System.out.println(housesBase.searchMinToMax());
+        System.out.println(housesBase.searchMinToMax());
+        System.out.println(housesBase.searchMinToMax());
+        System.out.println(housesBase.searchMinToMax());
+        System.out.println(housesBase.searchMinToMax());
     }
 }
