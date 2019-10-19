@@ -1,6 +1,6 @@
 package ru.itpark.service;
 
-import ru.itpark.util.House;
+import ru.itpark.model.House;
 
 import java.util.ArrayList;
 import java.util.Comparator;

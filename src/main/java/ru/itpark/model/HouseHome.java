@@ -1,7 +1,5 @@
 package ru.itpark.model;
 
-import ru.itpark.util.House;
-
 import java.util.List;
 
 public class HouseHome extends House {
