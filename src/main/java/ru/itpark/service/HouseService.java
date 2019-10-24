@@ -25,10 +25,8 @@ public class HouseService {
     public List<House> searchInPrice(long price) {
         List<House> result = new ArrayList<>();
         if (houses == null) {
-            new Thread("объектов нет");
-            return result;
+            throw new IllegalArgumentException("объектов нет");
         }
-        long min = houses.get(0).getPrice();
         for (House house : houses) {
             if (house.getPrice() <= price) {
                 result.add(house);
