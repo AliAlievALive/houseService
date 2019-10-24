@@ -58,6 +58,16 @@ public class HouseService {
         }
     }
 
+    public List<House> searchInPrice(String area) {
+        List<House> result = new ArrayList<>();
+        for (House house : houses) {
+            if (house.getArea().toUpperCase().contains(area.toUpperCase())) {
+                result.add(house);
+            }
+        }
+        return result;
+    }
+
     public List<House> searchInArea(String area) {
         List<House> result = new ArrayList<>();
         for (House house : houses) {
