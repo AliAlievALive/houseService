@@ -72,6 +72,7 @@ public class Main {
         housesBase.addHouse(apartment1);
         housesBase.addHouse(apartment2);
         housesBase.addHouse(house2);
+
         System.out.println(housesBase.searchInPrice(2_000_000));
         System.out.println(housesBase.searchInArea("Вахитовский"));
     }
