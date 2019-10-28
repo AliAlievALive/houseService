@@ -8,6 +8,8 @@ import java.util.Comparator;
 import java.util.List;
 
 public class HouseService {
+    List<House> searchResult;
+
     private List<House> houses = new ArrayList<>();
 
     public List<House> getHouses() {
@@ -15,6 +17,9 @@ public class HouseService {
     }
 
     public void setHouses(ArrayList<House> houses) {
+        if (houses == null) {
+            throw new IllegalArgumentException("объектов нет");
+        }
         this.houses = houses;
     }
 
@@ -22,11 +27,12 @@ public class HouseService {
         houses.add(house);
     }
 
+    public void setSearchResult(List<House> searchResult) {
+        this.searchResult = searchResult;
+    }
+
     public List<House> searchInPrice(long price) {
         List<House> result = new ArrayList<>();
-        if (houses == null) {
-            throw new IllegalArgumentException("объектов нет");
-        }
         for (House house : houses) {
             if (house.getPrice() <= price) {
                 result.add(house);
